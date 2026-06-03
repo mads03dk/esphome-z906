@@ -8,7 +8,7 @@ This component exposes the Z906 as a hub-style integration. Adding a single `z90
 
 ![Home Assistant screenshot](docs/images/home-assistant.png)
 
-![Soldering and wiring](docs/images/soldering.jpg)
+![Soldering and wiring](docs/images/soldering.png)
 
 
 ## Features
