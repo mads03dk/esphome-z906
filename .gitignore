@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.esphome/
+.pioenvs/
+.piolibdeps/
+.vscode/
+.DS_Store

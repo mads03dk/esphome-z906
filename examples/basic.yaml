@@ -1,0 +1,45 @@
+substitutions:
+  device_name: z906-basic
+  device_comment: "Logitech Z906 UART controller"
+
+esphome:
+  name: ${device_name}
+  comment: ${device_comment}
+
+esp8266:
+  board: d1_mini
+
+logger:
+
+api:
+
+ota:
+  - platform: esphome
+
+wifi:
+  ssid: "YOUR_WIFI_SSID"
+  password: "YOUR_WIFI_PASSWORD"
+
+external_components:
+  - source:
+      type: local
+      path: ../components
+    components: [ z906 ]
+
+uart:
+  id: uart_bus
+  tx_pin:
+    number: D5
+    mode:
+      output: true
+      open_drain: true
+  rx_pin: D6
+  baud_rate: 57600
+  parity: ODD
+  data_bits: 8
+  stop_bits: 1
+
+z906:
+  id: z906_amp
+  uart_id: uart_bus
+  update_interval: 1s
